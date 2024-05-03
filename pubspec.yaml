@@ -60,6 +60,7 @@ flutter:
 
   assets:
     - assets/fonts/
+    - assets/images/sandy.png
 
   fonts:
     - family: Montserrat

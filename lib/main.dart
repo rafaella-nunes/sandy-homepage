@@ -87,8 +87,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: Color.fromARGB(255, 116, 116, 116)),
                 ),
                 const SizedBox(
-                  height: 50,
+                  height: 10,
                 ),
+                Image.asset(
+                  'assets/images/sandy.png',
+                  ),
                 ElevatedButton(
                   onPressed: () {
                     // Ação a ser executada quando o botão for pressionado

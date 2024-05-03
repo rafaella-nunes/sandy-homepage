@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       text: 'Olá, eu sou a',
                       style: TextStyle(
                           fontFamily: 'Montserrat',
-                          fontSize: 23,
+                          fontSize: 25,
                           fontWeight: FontWeight.w700,
                           color: Color(0xFF383838)),
                       children: <TextSpan>[
@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           text: ' Sandy 👋',
                           style: TextStyle(
                             fontFamily: 'Montserrat',
-                            fontSize: 23,
+                            fontSize: 25,
                             fontWeight: FontWeight.bold,
                             color: Color(0xFF8342FF),
                           ),
@@ -85,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: TextStyle(
                         fontFamily: 'Montserrat',
                         fontSize: 15,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w600,
                         color: Color.fromARGB(255, 116, 116, 116)),
                   ),
                   const SizedBox(
@@ -108,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           vertical: 18), // Espaçamento interno do botão
                       textStyle: const TextStyle(
                         fontFamily: 'Montserrat',
-                        fontSize: 16,
+                        fontSize: 15,
                         fontWeight: FontWeight.bold,
                       ),
                       shape: RoundedRectangleBorder(

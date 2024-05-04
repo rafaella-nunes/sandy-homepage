@@ -35,6 +35,14 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    const LinearGradient gradient = LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Color(0xFF803EFF),
+                    Color(0xFF9F6CFF),
+                  ],
+                );
     return Scaffold(
       backgroundColor: const Color(0xFFFAFBFC),
       body: Stack(
@@ -61,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       text: 'Olá, eu sou a',
                       style: TextStyle(
                           fontFamily: 'Montserrat',
-                          fontSize: 23,
+                          fontSize: 25,
                           fontWeight: FontWeight.w700,
                           color: Color(0xFF383838)),
                       children: <TextSpan>[
@@ -69,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           text: ' Sandy 👋',
                           style: TextStyle(
                             fontFamily: 'Montserrat',
-                            fontSize: 23,
+                            fontSize: 25,
                             fontWeight: FontWeight.bold,
                             color: Color(0xFF8342FF),
                           ),
@@ -85,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: TextStyle(
                         fontFamily: 'Montserrat',
                         fontSize: 15,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w600,
                         color: Color.fromARGB(255, 116, 116, 116)),
                   ),
                   const SizedBox(
@@ -95,29 +103,31 @@ class _MyHomePageState extends State<MyHomePage> {
                     'assets/images/sandy.png',
                     height: 450,
                     ),
-                  ElevatedButton(
-                    onPressed: () {
-                      // Ação a ser executada quando o botão for pressionado
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor:
-                          const Color(0xFF8342FF), // Cor de fundo do botão
-                      foregroundColor: Colors.white, // Cor do texto do botão
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 30,
-                          vertical: 18), // Espaçamento interno do botão
-                      textStyle: const TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                            30), // Borda arredondada do botão
-                      ),
-                    ),
-                    child: const Text('CONVERSAR COM A SANDY'),
-                  ),
+
+                  DecoratedBox(
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(30)),
+                          gradient: gradient,
+                        ),
+                        child: TextButton(
+                          onPressed: (){
+                          },
+                          style: ButtonStyle(
+                            overlayColor: MaterialStateProperty.all(Colors.transparent),
+                          ),
+                          child: Container(
+                            alignment: Alignment.center,
+                            height: 49,
+                            width: MediaQuery.sizeOf(context).width * .7,
+                            child: const Text("CONVERSAR COM A SANDY",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'Montserrat',
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold)),
+                          ),
+                        ),
+                ),
                 ],
               ),
             ),
